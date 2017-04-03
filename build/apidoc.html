@@ -46,7 +46,7 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
 
         href="https://github.com/chjj/blessed"
@@ -28679,7 +28679,23 @@ box.insertLine(1, &#x27;foo&#x27;);
 
   return info;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+);
+
+function readMethods() {
+Tput._infoBuffer = new Buffer(TERMINFO, &#x27;base64&#x27;);
+
+Tput.prototype.readTerminfo = function() {
+  this.terminal = TERMINFO_NAME;
+  return this.<span class="apidocCodeKeywordSpan">parseTerminfo</span>(Tput._infoBuffer, TERMINFO_PATH);
+};
+
+Tput.cpaths = [];
+Tput.termcap = TERMCAP;
+
+Tput.prototype._readTermcap = Tput.prototype.readTermcap;
+Tput.prototype.readTermcap = function() {
+...</pre></li>
     </ul>
 
 
