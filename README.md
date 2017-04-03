@@ -1,17 +1,13 @@
-# api-documentation for  [blessed (v0.1.81)](https://github.com/chjj/blessed)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-blessed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-blessed)
+# api documentation for  [blessed (v0.1.81)](https://github.com/chjj/blessed)  [![npm package](https://img.shields.io/npm/v/npmdoc-blessed.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-blessed) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-blessed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-blessed)
 #### A high-level terminal interface library for node.js.
 
 [![NPM](https://nodei.co/npm/blessed.png?downloads=true)](https://www.npmjs.com/package/blessed)
 
-# html version
+[![apidoc](https://npmdoc.github.io/node-npmdoc-blessed/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-blessed_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-blessed/build..beta..travis-ci.org/apidoc.html)
 
-- [https://npmdoc.github.io/node-npmdoc-blessed/build..beta..travis-ci.org/apidoc.html](https://npmdoc.github.io/node-npmdoc-blessed/build..beta..travis-ci.org/apidoc.html)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-blessed/build/screenCapture.npmPackageListing.svg)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-blessed/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-blessed_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-blessed/build..beta..travis-ci.org/apidoc.html)
-
-# package listing
-
-![package-listing](https://npmdoc.github.io/node-npmdoc-blessed/build/screen-capture.npmPackageListing.svg)
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-blessed/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -19365,7 +19361,23 @@ parseTerminfo = function (data, file) {
 ```
 - example usage
 ```shell
-n/a
+...
+);
+
+function readMethods() {
+Tput._infoBuffer = new Buffer(TERMINFO, 'base64');
+
+Tput.prototype.readTerminfo = function() {
+  this.terminal = TERMINFO_NAME;
+  return this.parseTerminfo(Tput._infoBuffer, TERMINFO_PATH);
+};
+
+Tput.cpaths = [];
+Tput.termcap = TERMCAP;
+
+Tput.prototype._readTermcap = Tput.prototype.readTermcap;
+Tput.prototype.readTermcap = function() {
+...
 ```
 
 #### <a name="apidoc.element.blessed.Tput.prototype.readTermcap"></a>[function <span class="apidocSignatureSpan">blessed.Tput.prototype.</span>readTermcap (term)](#apidoc.element.blessed.Tput.prototype.readTermcap)
