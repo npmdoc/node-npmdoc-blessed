@@ -21,19 +21,33 @@
 ```json
 
 {
-    "name": "blessed",
-    "description": "A high-level terminal interface library for node.js.",
-    "author": "Christopher Jeffrey",
-    "version": "0.1.81",
-    "license": "MIT",
-    "main": "./lib/blessed.js",
-    "bin": "./bin/tput.js",
-    "preferGlobal": false,
-    "repository": "git://github.com/chjj/blessed.git",
-    "homepage": "https://github.com/chjj/blessed",
+    "author": {
+        "name": "Christopher Jeffrey"
+    },
+    "bin": {
+        "blessed": "./bin/tput.js"
+    },
+    "browserify": {
+        "transform": [
+            "./browser/transform.js"
+        ]
+    },
     "bugs": {
         "url": "http://github.com/chjj/blessed/issues"
     },
+    "dependencies": {},
+    "description": "A high-level terminal interface library for node.js.",
+    "devDependencies": {},
+    "directories": {},
+    "dist": {
+        "shasum": "f962d687ec2c369570ae71af843256e6d0ca1129",
+        "tarball": "https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz"
+    },
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "gitHead": "a45575fee63fac158fd467087ec172f657bfec6b",
+    "homepage": "https://github.com/chjj/blessed",
     "keywords": [
         "curses",
         "tui",
@@ -41,6 +55,21 @@
         "terminfo",
         "termcap"
     ],
+    "license": "MIT",
+    "main": "./lib/blessed.js",
+    "maintainers": [
+        {
+            "name": "chjj"
+        }
+    ],
+    "name": "blessed",
+    "optionalDependencies": {},
+    "preferGlobal": false,
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/chjj/blessed.git"
+    },
+    "scripts": {},
     "tags": [
         "curses",
         "tui",
@@ -48,14 +77,7 @@
         "terminfo",
         "termcap"
     ],
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "browserify": {
-        "transform": [
-            "./browser/transform.js"
-        ]
-    }
+    "version": "0.1.81"
 }
 ```
 
